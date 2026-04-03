@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&family=Onest:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 40 20% 95%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 36 60% 50%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 36 60% 50%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 36 60% 50%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 9%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 36 60% 50%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 40 20% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 36 60% 50%;
+
+    /* Custom tokens */
+    --warm: 30 15% 70%;
+    --gold-glow: 36 80% 55%;
+    --surface-elevated: 0 0% 13%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Onest', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Unbounded', sans-serif;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-5 py-20 md:px-10 lg:px-20 lg:py-28;
+  }
+
+  .text-warm {
+    color: hsl(var(--warm));
+  }
+
+  .text-gold {
+    color: hsl(var(--gold-glow));
+  }
+
+  .bg-elevated {
+    background-color: hsl(var(--surface-elevated));
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(36 60% 50%), hsl(36 80% 60%));
+  }
+
+  .gradient-gold-text {
+    background: linear-gradient(135deg, hsl(36 60% 50%), hsl(42 80% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: hsl(36 60% 50% / 0.3);
+  color: hsl(40 20% 95%);
+}
