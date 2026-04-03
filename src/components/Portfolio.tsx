@@ -3,10 +3,10 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { translations, t } from "@/i18n/translations";
 
 const projects = [
-  { title: "RYBALSKY", image: "/images/project-1.jpg" },
-  { title: "AMERICAN", image: "/images/project-2.jpg" },
-  { title: "LOFT 1", image: "/images/project-3.jpg" },
-  { title: "BELLAGGO", image: "/images/project-4.jpg" },
+  { title: "RYBALSKY", image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" },
+  { title: "AMERICAN", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" },
+  { title: "LOFT 1", image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" },
+  { title: "BELLAGGO", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" },
 ];
 
 export const Portfolio = () => {
